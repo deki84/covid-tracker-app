@@ -16,5 +16,6 @@ export class SummaryCardsComponent implements OnInit, OnChanges {
 
   ngOnChanges(): void {
     this.summaryData = this.covidData.Global;
+    
   }
 }

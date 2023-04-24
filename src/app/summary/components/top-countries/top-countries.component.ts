@@ -16,15 +16,16 @@ export class TopCountriesComponent implements OnInit, OnChanges {
   topConfirmedCases: any[] = [];
   topConfirmedDeaths: any[] = [];
   topConfirmedRecovered: any[] = [];
-
+  
   constructor() {}
   ngOnInit(): void {
-    
+  
   }
   ngOnChanges(): void {
-    this.topConfirmedCases = this.covidData.countries
+    this.topConfirmedCases = this.covidData.Countries
       ?.sort((a: any, b: any) => (b.TotalConfirmed = a.TotalConfirmed))
       .slice(0, 5);
+    console.log(this.topConfirmedCases);
   }
   
 
