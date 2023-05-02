@@ -10,5 +10,6 @@ export class DataService {
 
   getSummaryData(){
     return this.http.get('https://api.covid19api.com/summary');
+    
   }
 }

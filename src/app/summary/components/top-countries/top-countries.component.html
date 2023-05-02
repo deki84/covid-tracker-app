@@ -4,39 +4,14 @@
     <ul class="list-group">
       <li
         class="list-group-item d-flex justif-content-between align-content-center"
+        *ngFor="let country of topConfirmedCases"
       >
         <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">Australia</div>
-        <span class="badge bg-warning rounded-pill">100,000</span>
+        <div class="fw-bold">{{country?.Country}}</div>
+        <span class="badge bg-warning rounded-pill">{{country?.TotalConfirmed| number}}
+        </span>
       </li>
-      <li
-        class="list-group-item d-flex justif-content-between align-content-center"
-      >
-        <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">Brazil</div>
-        <span class="badge bg-warning rounded-pill">200,000</span>
-      </li>
-      <li
-        class="list-group-item d-flex justif-content-between align-content-center"
-      >
-        <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">Norway</div>
-        <span class="badge bg-warning rounded-pill">300,000</span>
-      </li>
-      <li
-        class="list-group-item d-flex justif-content-between align-content-center"
-      >
-        <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">USA</div>
-        <span class="badge bg-warning rounded-pill">300,000</span>
-      </li>
-      <li
-        class="list-group-item d-flex justif-content-between align-content-center"
-      >
-        <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">Serbia</div>
-        <span class="badge bg-warning rounded-pill">300,000</span>
-      </li>
+   
     </ul>
   </div>
   <div class="col-md-4">
@@ -44,39 +19,13 @@
     <ul class="list-group">
       <li
         class="list-group-item d-flex justif-content-between align-content-center"
-      >
+      *ngFor="let country of topConfirmedDeaths"
+        >
         <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">Australia</div>
-        <span class="badge bg-danger rounded-pill">300,000</span>
+        <div class="fw-bold">{{country?.Country}}</div>
+        <span class="badge bg-danger rounded-pill">{{country?.TotalDeaths | number}}</span>
       </li>
-      <li
-        class="list-group-item d-flex justif-content-between align-content-center"
-      >
-        <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">Brazil</div>
-        <span class="badge bg-danger rounded-pill">300,000</span>
-      </li>
-      <li
-        class="list-group-item d-flex justif-content-between align-content-center"
-      >
-        <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">Norway</div>
-        <span class="badge bg-danger rounded-pill">300,000</span>
-      </li>
-      <li
-        class="list-group-item d-flex justif-content-between align-content-center"
-      >
-        <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">USA</div>
-        <span class="badge bg-danger rounded-pill">300,000</span>
-      </li>
-      <li
-        class="list-group-item d-flex justif-content-between align-content-center"
-      >
-        <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">Serbia</div>
-        <span class="badge bg-danger rounded-pill">300,000</span>
-      </li>
+   
     </ul>
   </div>
   <div class="col-md-4">
@@ -84,39 +33,13 @@
     <ul class="list-group">
       <li
         class="list-group-item d-flex justif-content-between align-content-center"
-      >
+      *ngFor="let country of topConfirmedRecovered"
+        >
         <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">Australia</div>
-        <span class="badge bg-success rounded-pill">300,000</span>
+        <div class="fw-bold">{{country?.Country}}</div>
+        <span class="badge bg-success rounded-pill">{{country?.TotalRecovered}}</span>
       </li>
-      <li
-        class="list-group-item d-flex justif-content-between align-content-center"
-      >
-        <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">Brazil</div>
-        <span class="badge bg-success rounded-pill">300,000</span>
-      </li>
-      <li
-        class="list-group-item d-flex justif-content-between align-content-center"
-      >
-        <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">Norway</div>
-        <span class="badge bg-success rounded-pill">300,000</span>
-      </li>
-      <li
-        class="list-group-item d-flex justif-content-between align-content-center"
-      >
-        <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">USA</div>
-        <span class="badge bg-success rounded-pill">300,000</span>
-      </li>
-      <li
-        class="list-group-item d-flex justif-content-between align-content-center"
-      >
-        <div class="ms-2 me-auto"></div>
-        <div class="fw-bold">Serbia</div>
-        <span class="badge bg-success rounded-pill">300,000</span>
-      </li>
+   
     </ul>
   </div>
 </div>
