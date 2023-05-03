@@ -11,27 +11,14 @@
             </tr>
         </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>USA</td>
-                    <td>233,435</td>
-                    <td>2,456</td>
-                     <td>175,231</td>
+                <tr *ngFor="let country of countries; let i = index">
+                    <th scope="row">{{i + 1}}</th>
+                    <td>{{country?.Country}}</td>
+                    <td>{{country?.TotalConfirmed | number }}</td>
+                    <td>{{country?.TotalRecovered | number }}</td>
+                     <td>{{country?.TotalDeaths | number }}</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>UK</td>
-                    <td>233,435</td>
-                    <td>2,456</td>
-                     <td>175,231</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Brasil</td>
-                    <td>233,435</td>
-                    <td>2,456</td>
-                     <td>175,231</td>
-                </tr>
+               
             </tbody>
        
       </table>  
