@@ -12,7 +12,7 @@ export class SearchComponent implements OnInit {
   searchTerm: string ='';
 
   @Output()countryToSearch = new EventEmitter<any>();
-  covidData : any;s
+  covidData : any;
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
