@@ -18,6 +18,6 @@ export class SearchComponent implements OnInit {
     
   }
   search(){
-    console.log(this.searchTerm);
+   this.countryToSearch.emit(this.searchTerm);
   }
 }
