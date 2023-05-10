@@ -1,4 +1,5 @@
 import { Component,Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { SearchService } from 'src/app/shared/services/search.service';
 
 @Component({
   selector: 'app-data-table',
@@ -8,10 +9,14 @@ import { Component,Input, OnChanges, OnInit, SimpleChanges } from '@angular/core
 export class DataTableComponent implements OnInit, OnChanges{
  @Input() covidData:any;
  countries: any[]=[];
- constructor(){}
+ constructor(private searchService: SearchService){}
 
  ngOnInit(): void {
-   
+   this.searchService.getCountries().subscribe(
+    (data: any) =>{
+      this.countries = data;
+    }
+   )
  }
 
  ngOnChanges(): void {

@@ -1,3 +1,4 @@
+import { SearchService } from './../../../shared/services/search.service';
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/shared/services/data.service';
 
@@ -8,7 +9,8 @@ import { DataService } from 'src/app/shared/services/data.service';
 })
 export class CountryPageComponent implements OnInit {
   covidData :any
- constructor(private dataService:DataService){}
+ constructor(private dataService:DataService,
+  private searchService: SearchService){}
  ngOnInit(): void {
    this.dataService.getSummaryData()
    .subscribe((data:any) =>{
@@ -22,7 +24,7 @@ searchCountry(country: string){
     (c: any) =>
       c.Country.toLowerCase().includes(country.toLowerCase())
   )
-  console.log('Countries',countries);
+  this.searchService.setCountries(countries);
 }
 
 }
